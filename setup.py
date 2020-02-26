@@ -18,8 +18,8 @@ setup(
     long_description=README,
     long_description_content_type='text/markdown',
     url='https://github.com/italia/design-django-theme',
-    author='Francesco Filicetti',
-    author_email='francesco.filicetti@unical.it',
+    author='Giuseppe De Marco, Francesco Filicetti',
+    author_email='giuseppe.demarco@unical.it, francesco.filicetti@unical.it',
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
