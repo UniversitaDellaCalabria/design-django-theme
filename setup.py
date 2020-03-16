@@ -7,9 +7,12 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
+# python3 setup.py sdist
+# python3 -m twine upload
+
 setup(
     name='design-django-theme',
-    version='v1.3.9-3',
+    version='v1.3.10',
     packages=['bootstrap_italia_template',],
     package_data = {'bootstrap_italia_template': ['bootstrap_italia_template/*']},
     include_package_data=True,
@@ -32,7 +35,7 @@ setup(
         'Programming Language :: Python :: 3',
     ],
     install_requires=[
-        'django>2.9',
+        'django>=2.2.11',
         'libsass>=0.19.4',
         'django-sass-processor>=0.8',
         'django_compressor>=2.4',
