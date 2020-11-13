@@ -1,5 +1,8 @@
-<!DOCTYPE html>
+{% load django_bootstrap_italia_tags %}
+{% load i18n %}
 {% load static %}
+
+<!DOCTYPE html>
 <html lang="it">
     <head>
         <!-- Required meta tags -->
@@ -12,6 +15,10 @@
         <meta name="description" content="{% block page_meta_description %}Bootstrap Italia{% endblock page_meta_description %}">
         <!-- CSS -->
         <link rel="stylesheet" href="{% static 'css/bootstrap-italia.min.css' %}">
+        <!-- Fonts -->
+        <script>window.__PUBLIC_PATH__ = "{% static 'fonts' %}"</script>
+        <!-- Javascript -->
+        <script src="{% static 'js/bootstrap-italia.bundle.min.js' %}"></script>
         <!-- Extra CSS/Javascript -->
         {% block extra_head %}
         <link rel="icon" href="{% static 'images/favicon.ico' %}">
@@ -30,11 +37,13 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="it-header-slim-wrapper-content">
+                                {% block header_slim_top_left %}
                                 <a class="d-none d-lg-block navbar-brand" href="{% block header_slim_org_url %}#{% endblock header_slim_org_url %}">
                                     {% block header_slim_org_name %}
                                     Nome Ente/Organizzazione
                                     {% endblock header_slim_org_name %}
                                 </a>
+                                {% endblock header_slim_top_left %}
                                 <div class="nav-mobile">
                                     <nav>
                                         <a class="it-opener d-lg-none" data-toggle="collapse" href="#menu-principale" role="button" aria-expanded="false" aria-controls="menu-principale">
@@ -87,7 +96,7 @@
 
                                     {% block header_slim_buttons %}
                                     <div class="it-access-top-wrapper">
-                                        <button class="btn btn-primary btn-sm" href="#" type="button">Accedi</button>
+                                        <button class="btn btn-primary btn-sm" href="#" type="button">{% trans "Accedi" %}</button>
                                     </div>
                                     {% endblock header_slim_buttons %}
                                 </div>
@@ -134,7 +143,7 @@
                                     <div class="it-right-zone">
                                         {% block header_center_social %}
                                         <div class="it-socials d-none d-md-flex">
-                                            <span>Seguici su</span>
+                                            <span>{% trans "Seguici su" %}</span>
                                             <ul>
                                                 <li>
                                                     <a href="#" aria-label="Facebook" target="_blank">
@@ -171,7 +180,7 @@
                                             </span>
                                             {% endblock header_center_search_text %}
 
-                                            <a class="search-link rounded-icon" href="{% block header_center_search_url %}#{% endblock header_center_search_url %}" aria-label="Cerca">
+                                            <a class="search-link rounded-icon" href="{% block header_center_search_url %}#{% endblock header_center_search_url %}" aria-label="{% trans 'Cerca' %}">
                                                 {% block header_center_search_icon %}
                                                 <svg class="icon">
                                                     <use xlink:href="{% static 'svg/sprite.svg' %}#it-search"></use>
@@ -535,8 +544,16 @@
         {% endblock footer %}
 
         {% block bottom_scripts %}
-        <script>window.__PUBLIC_PATH__ = "{% static 'fonts' %}"</script>
-        <script src="{% static 'js/bootstrap-italia.bundle.min.js' %}"></script>
+        <script>
+        <!-- Placed here to take customizable settings value -->
+        {% default_js_date_value as default_js_date_value %}
+        $(document).ready(function() {
+            $('.it-date-datepicker').datepicker({
+                inputFormat: ["{{ default_js_date_value }}"],
+                outputFormat: "{{ default_js_date_value }}",
+            });
+        });
+        </script>
         {% endblock bottom_scripts %}
         {% block extra_scripts %}{% endblock extra_scripts %}
     </body>
