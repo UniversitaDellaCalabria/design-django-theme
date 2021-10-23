@@ -26,7 +26,7 @@ maintenance:
       email: francesco.filicetti@unical.it
       affiliation: unical.it
 legal:
-  license: BSD-3-Clause
+  license: Apache-2.0
   repoOwner: Università della Calabria
   authorsFile: AUTHORS
 localisation:
