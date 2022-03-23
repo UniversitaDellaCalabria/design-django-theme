@@ -16,16 +16,16 @@
         <meta name="keywords" content="{% block page_meta_keywords %}Bootstrap Italia{% endblock page_meta_keywords %}">
         <meta name="robots" content="{% block page_meta_robots %}all{% endblock page_meta_robots %}" />
         <!-- CSS -->
-        <link rel="stylesheet" href="https://universitadellacalabria.github.io/design-django-theme/bootstrap_italia_template/static/css/bootstrap-italia.min.css">
+        <link rel="stylesheet" href="{% static 'css/bootstrap-italia.min.css' %}">
         <!-- Fonts -->
-        <script>window.__PUBLIC_PATH__ = "https://universitadellacalabria.github.io/design-django-theme/bootstrap_italia_template/static/fonts"</script>
+        <script>window.__PUBLIC_PATH__ = "{% static 'fonts' %}"</script>
         <!-- Javascript -->
-        <script src="https://universitadellacalabria.github.io/design-django-theme/bootstrap_italia_template/static/js/bootstrap-italia.bundle.min.js"></script>
+        <script src="{% static 'js/bootstrap-italia.bundle.min.js' %}"></script>
         <!-- Extra CSS/Javascript -->
         {% block extra_head %}
-        <link rel="icon" href="https://universitadellacalabria.github.io/design-django-theme/bootstrap_italia_template/static/images/favicon.ico">
-        <link rel="icon" href="https://universitadellacalabria.github.io/design-django-theme/bootstrap_italia_template/static/images/favicon-32x32.png" sizes="32x32" type="image/png">
-        <link rel="icon" href="https://universitadellacalabria.github.io/design-django-theme/bootstrap_italia_template/static/images/favicon-16x16.png" sizes="16x16" type="image/png">
+        <link rel="icon" href="{% static 'images/favicon.ico' %}">
+        <link rel="icon" href="{% static 'images/favicon-32x32.png' %}" sizes="32x32" type="image/png">
+        <link rel="icon" href="{% static 'images/favicon-16x16.png' %}" sizes="16x16" type="image/png">
         {% endblock extra_head %}
     </head>
     <body>
