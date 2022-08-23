@@ -4,11 +4,11 @@
 
 publiccodeYmlVersion: '0.2'
 name: Django Bootstrap Italia template
-releaseDate: '2022-07-30'
+releaseDate: '2022-08-23'
 url: 'https://github.com/UniversitaDellaCalabria/design-django-theme'
 applicationSuite: Django Framework
 landingURL: 'https://github.com/italia/design-django-theme'
-softwareVersion: '1.6.4'
+softwareVersion: '2.0.2'
 developmentStatus: stable
 softwareType: library
 roadmap: 'https://github.com/italia/design-django-theme/issues'
@@ -44,7 +44,7 @@ description:
       web della PA.
     genericName: Template Django Bootstrap Italia
     longDescription: >
-      Il tema Bootstrap Italia è lo strumento Bootstrap 4 per lo sviluppo di
+      Il tema Bootstrap Italia è lo strumento Bootstrap 5 per lo sviluppo di
       applicazioni web per la Pubblica Amministrazione.
 
 
