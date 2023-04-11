@@ -9,9 +9,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <!-- Page details -->
-        <title>
-            {% block page_title %}Bootstrap Italia{% endblock page_title %}
-        </title>
+        <title>{% block page_title %}Bootstrap Italia{% endblock page_title %}</title>
         <meta name="description" content="{% block page_meta_description %}Bootstrap Italia{% endblock page_meta_description %}">
         <meta name="keywords" content="{% block page_meta_keywords %}Bootstrap Italia{% endblock page_meta_keywords %}">
         <meta name="robots" content="{% block page_meta_robots %}all{% endblock page_meta_robots %}" />
@@ -213,7 +211,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <nav class="navbar navbar-expand-lg has-megamenu">
-                                    <button class="custom-navbar-toggler" type="button" aria-controls="nav10" aria-expanded="false" aria-label="Toggle navigation" data-target="#nav10">
+                                    <button class="custom-navbar-toggler" type="button" aria-controls="nav10" aria-expanded="false" aria-label="Toggle navigation" data-target="#nav10" data-bs-toggle="navbarcollapsible" data-bs-target="#nav10">
                                         <svg class="icon">
                                             <use xlink:href="{% static 'svg/sprites.svg' %}#it-burger"></use>
                                         </svg>
@@ -221,7 +219,11 @@
                                     <div class="navbar-collapsable" id="nav10">
                                         <div class="overlay"></div>
                                         <div class="close-div sr-only">
-                                            <button class="btn close-menu" type="button"><span class="it-close"></span>close</button>
+                                            <button class="btn close-menu" type="button">
+                                                <svg class="icon">
+                                                    <use xlink:href="{% static 'svg/sprites.svg' %}#it-close-big"></use>
+                                                </svg>
+                                            </button>
                                         </div>
                                         <div class="menu-wrapper">
                                             <ul class="navbar-nav">
