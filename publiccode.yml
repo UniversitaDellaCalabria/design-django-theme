@@ -4,11 +4,11 @@
 
 publiccodeYmlVersion: '0.2'
 name: Django Bootstrap Italia template
-releaseDate: '2022-04-11'
+releaseDate: '2023-05-09'
 url: 'https://github.com/UniversitaDellaCalabria/design-django-theme'
 applicationSuite: Django Framework
 landingURL: 'https://github.com/italia/design-django-theme'
-softwareVersion: '2.3.6-2'
+softwareVersion: '2.4.2'
 developmentStatus: stable
 softwareType: library
 roadmap: 'https://github.com/italia/design-django-theme/issues'
@@ -26,7 +26,7 @@ maintenance:
       email: francesco.filicetti@unical.it
       affiliation: unical.it
 legal:
-  license: Apache-2.0
+  license: BSD-3-Clause
   repoOwner: Università della Calabria
   authorsFile: AUTHORS
 localisation:
