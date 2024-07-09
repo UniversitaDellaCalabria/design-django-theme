@@ -4,11 +4,11 @@
 
 publiccodeYmlVersion: '0.2'
 name: Django Bootstrap Italia template
-releaseDate: '2024-01-08'
+releaseDate: '2024-07-09'
 url: 'https://github.com/UniversitaDellaCalabria/design-django-theme'
 applicationSuite: Django Framework
 landingURL: 'https://github.com/italia/design-django-theme'
-softwareVersion: '2.8.1'
+softwareVersion: '2.8.8'
 developmentStatus: stable
 softwareType: library
 roadmap: 'https://github.com/italia/design-django-theme/issues'
